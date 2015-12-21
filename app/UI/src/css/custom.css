@@ -1,0 +1,83 @@
+/* Custom CSS */
+
+body {
+    font-family: "Ubuntu", "monospace";
+    font-size: 15px;
+}
+
+.valign-middle {
+    vertical-align: middle;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.cursor-default {
+    cursor: default;
+}
+
+.top-border {
+    border-width: 1px 0 0 0;
+    border-style: solid;
+    border-color: black;
+}
+
+nested-table {
+    display: inline-block;
+    width: 100%;
+    border-style: solid;
+    border-width: 0 1px 1px 1px;
+}
+
+.tblwg-table {
+    display: table;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.tblwg-table-row {
+    display: table-row;
+    background: lightblue;
+    padding: 0;
+}
+
+.tblwg-table-cell {
+    display: table-cell;
+}
+
+.tblwg-column-total {
+    min-width: 130px;
+    text-align: center;
+}
+
+.tblwg-column-total pre {
+    vertical-align: middle;
+    padding: 0;
+    margin: 0;
+}
+
+.tblwg-row-content > .tblwg-table {
+    border-width: 0 1px 0 0;
+}
+
+.tblwg-cell-content {
+    padding: 6px;
+}
+
+.tblwg-title {
+    padding-left: 10px;
+}
+
+.tblwg-no-total {
+    display: block;
+}
+
+.no-right-border {
+    border-right: 0px;
+}

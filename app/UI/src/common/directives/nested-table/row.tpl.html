@@ -1,0 +1,27 @@
+<div class="tblwg-table-row col-xs-12">
+    <div class="tblwg-table-cell full-width" ng-class="{'tblwg-no-total': !utils.hasTotal(item)}">
+
+        <div class="tblwg-table top-border">
+            <div class="tblwg-table-row" ng-click="events.titleClick(item)" ng-class="{'cursor-pointer': utils.hasChildren(item), 'cursor-default': !utils.hasChildren(item)}">
+                <div class="tblwg-table-cell">
+
+                    <div class="tblwg-cell-content tblwg-title">
+                        {{ item.title }}
+                    </div>
+
+                </div>
+            </div>
+            <div class="tblwg-table-row tblwg-row-content" ng-if="item.children.length" ng-show="item.expanded">
+                <div class="tblwg-table top-border" ng-class="{'no-right-border': !utils.parentHasTotal(item)}" if="utils.hasChildren(item)" ng-repeat="item in utils.getChildren(item)" ng-include="rowTemplate"></div>
+            </div>
+        </div>
+
+    </div>
+    <div class="tblwg-table-cell tblwg-column-total valign-middle top-border" ng-click="events.titleClick(item)" ng-if="utils.hasTotal(item)" ng-class="{'cursor-pointer': utils.hasChildren(item)}">
+
+        <div class="tblwg-cell-content">
+            <pre>{{ item.total }}</pre>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,10 @@
+.tmp
+.sass-cache
+build/
+bin/
+static/
+node_modules/
+vendor/
+.idea/
+coverage/
+*.*~

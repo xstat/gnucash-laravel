@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html data-ng-app="ng-stack" data-ng-controller="AppCtrl">
+<head>
+  <meta charset="utf-8"/>
+  <base href="/"/>
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--<link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon"> -->
+  <!-- Bootstrap from MaxCDN -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <!-- FontAwesome from MaxCDN -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <!-- compiled CSS --><% styles.forEach( function ( file ) { %>
+  <link rel="stylesheet" type="text/css" href="<%= file %>"/>
+  <% }); %>
+  <!-- compiled JavaScript --><% scripts.forEach( function ( file ) { %>
+  <script type="text/javascript" src="<%= file %>"></script>
+  <% }); %>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-inverse" ng-init="isCollapsed = true">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" ng-click="isCollapsed = !isCollapsed">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" data-ui-sref="home">NG-STACK</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="navbar-collapse" collapse="isCollapsed">
+        <ul class="nav navbar-nav">
+          <li data-ui-sref-active="active">
+            <a data-ui-sref="home">Home</a>
+          </li>
+          <li>
+            <a data-ui-sref="profit-vs-loss">Profit vs. Loss</a>
+          </li>
+        </ul>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+  <section class="container" ui-view="container" autoscroll="false">
+    <div class="row">
+      <div class="col-md-12" ui-view="main"></div>
+     </div>
+
+    <hr>
+
+    <footer class="row">
+      <p>&copy; ng-stack 2015</p>
+    </footer>
+  </section>
+
+</body>
+</html>
